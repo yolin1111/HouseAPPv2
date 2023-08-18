@@ -10,6 +10,9 @@
                              v1.05    建立HousingLocationComponent，ng g c housingLocation --standalone --inline-template --skip-tests
                              v1.06    將HousingLocationComponent加到HomeComponent內，並先顯示Work
                              v1.07    預先加入CSS在HousingLocationComponent
+                             v1.08    建立ng g interface housinglocation (有雷注意，指令都是小寫，但是Interface卻是建立開頭大寫 Housinglocation)
+                                      修改 interface 為 HousingLocation
+                                      加入 interface 欄位
   ************************************************************************************************/
 
 建立觀念
