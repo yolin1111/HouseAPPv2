@@ -1,104 +1,14 @@
-//import { Component } from '@angular/core'; //mark v1.11
-import { Component, inject } from '@angular/core'; //add v1.11 inject 注入
-import { CommonModule } from '@angular/common';
-import { HousingLocationComponent } from '../housing-location/housing-location.component'; //add v1.06
-import { HousingLocation } from '../housinglocation'; //add v1.09
-import { HousingService } from '../housing.service'; //add v1.11
+import { Injectable } from '@angular/core';
+import { HousingLocation } from './housinglocation'; //add v1.11
 
-@Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    CommonModule,
-    HousingLocationComponent //v1.06
-  ],
-  /* mark v1.04
-  template: `
-    <p>
-      home works!
-    </p>
-  `,
-  */
-  /* mark v1.06
-   template: `
-   <section>
-     <form>
-       <input type="text" placeholder="Filter by city">
-       <button class="primary" type="button">Search</button>
-     </form>
-   </section>
- `,
- */
-  /* mark v1.09
-  template: `
-    <section>
-      <form>
-        <input type="text" placeholder="Filter by city">
-        <button class="primary" type="button">Search</button>
-      </form>
-    </section>
-    <section class="results">
-      <app-housing-location></app-housing-location>
-    </section>
-    `,
-    */
-  /* mark v1.10
-  template: `
-  <section>
-    <form>
-      <input type="text" placeholder="Filter by city">
-      <button class="primary" type="button">Search</button>
-    </form>
-  </section>
-  <section class="results">
-  <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
-  </section>
-  `,
-  */
-  template: `
-  <section>
-    <form>
-      <input type="text" placeholder="Filter by city">
-      <button class="primary" type="button">Search</button>
-    </form>
-  </section>
-  <section class="results">
-  <app-housing-location
-  *ngFor="let housingLocation of housingLocationList"
-  [housingLocation]="housingLocation">
-</app-housing-location>
-  </section>
-  `,
-  styleUrls: ['./home.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-/* mark v1.10
-export class HomeComponent {
-  //add v1.09
-  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
+export class HousingService {
 
-  housingLocation: HousingLocation = {
-    id: 9999,
-    name: 'Test Home',
-    city: 'Test city',
-    state: 'ST',
-    photo: `${this.baseUrl}/example-house.jpg`,
-    availableUnits: 99,
-    wifi: true,
-    laundry: false,
-  };
-}
-*/
-//add v1.10
-export class HomeComponent {
+  //constructor() { } //mark v1.11
 
   //add v1.11
-  housingLocationList: HousingLocation[] = [];
-  housingService: HousingService = inject(HousingService);
-  constructor() {
-    this.housingLocationList = this.housingService.getAllHousingLocations();
-  }
-
-  /* mark v1.11
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 
   housingLocationList: HousingLocation[] = [
@@ -203,5 +113,12 @@ export class HomeComponent {
       laundry: true
     }
   ];
-  */
+
+  getAllHousingLocations(): HousingLocation[] {
+    return this.housingLocationList;
+  }
+
+  getHousingLocationById(id: number): HousingLocation | undefined {
+    return this.housingLocationList.find(housingLocation => housingLocation.id === id);
+  }
 }
