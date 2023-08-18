@@ -13,6 +13,9 @@
                              v1.08    建立ng g interface housinglocation (有雷注意，指令都是小寫，但是Interface卻是建立開頭大寫 Housinglocation)
                                       修改 interface 為 HousingLocation
                                       加入 interface 欄位
+                             v1.09    目前理解
+                                      1.資料定義於HomeComponent 讓 HousingLocationComponent 讀取
+                                      2.透過 @Input()
   ************************************************************************************************/
 
 建立觀念
