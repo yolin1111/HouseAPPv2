@@ -1,0 +1,27 @@
+建立觀念
+1.執行npn install會使用package.json的設定，產生node_modules資料夾
+2.npm audit 可以查看目前套件狀況，看起來有些套件已經不支援或者有風險
+3.ng serve 啟動伺服器
+
+資料夾介紹(/src)
+index.html是應用程序的頂級 HTML 模板。
+style.css是應用程序的頂級樣式表。
+main.ts是應用程序開始運行的地方。
+favicon.ico是應用程序的圖標，就像您在任何網站中看到的一樣。
+
+
+component介紹(/app)
+app.component.ts是描述組件的源文件app-root。這是應用程序中的頂級 Angular 組件。組件是 Angular 應用程序的基本構建塊。組件描述包括組件的代碼、HTML 模板和样式，這些可以在此文件中進行描述，也可以在單獨的文件中進行描述。
+在此應用程序中，樣式位於單獨的文件中，而組件的代碼和 HTML 模板位於該文件中。
+app.component.css是該組件的樣式表。
+新組件將添加到此目錄中。
+
+圖片(/asset)
+
+其他文件
+.angular具有構建 Angular 應用程序所需的文件。
+.e2e有用於測試應用程序的文件。
+.node_modules具有應用程序使用的node.js 包。
+angular.json向應用程序構建工具描述 Angular 應用程序。
+package.json由npm（節點包管理器）用來運行完成的應用程序。
+tsconfig.*是向 TypeScript 編譯器描述應用程序配置的文件。
