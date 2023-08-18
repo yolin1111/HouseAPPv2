@@ -8,6 +8,7 @@
                              v1.03    將HomeComponent加到主畫面
                              v1.04    加入一個搜尋欄位、按鈕，加入CSS
                              v1.05    建立HousingLocationComponent，ng g c housingLocation --standalone --inline-template --skip-tests
+                             v1.06    將HousingLocationComponent加到HomeComponent內，並先顯示Work
   ************************************************************************************************/
 
 建立觀念
