@@ -21,6 +21,7 @@
                                       觀念將service資料注入(inject)到HomeComponent
                              v1.12    新增DetailsComponent，ng g c details --standalone --inline-template --skip-tests
                                       導入路由功能 當手動輸入 http://localhost:4200/details/3 會切換 DetailsComponent
+                             v1.13    點選後路由動態變換，並顯示 details works! 3
   ************************************************************************************************/
 
 建立觀念
