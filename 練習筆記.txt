@@ -1,7 +1,17 @@
+/************************************************************************************************
+   Description:練習Angular
+   HISTORY
+   Date         Authur      Version   Description
+   ----------   ---------   -------   -------------------------------------------------------------
+   2023/08/18   Yolin.Chen   v1.01    建立專案
+                             v1.02    建立HomeComponent，ng generate component home --standalone --inline-template --skip-tests
+  ************************************************************************************************/
+
 建立觀念
 1.執行npn install會使用package.json的設定，產生node_modules資料夾
 2.npm audit 可以查看目前套件狀況，看起來有些套件已經不支援或者有風險
 3.ng serve 啟動伺服器
+4.今天才知道ng 是Angular的縮寫
 
 資料夾介紹(/src)
 index.html是應用程序的頂級 HTML 模板。
@@ -25,3 +35,18 @@ app.component.css是該組件的樣式表。
 angular.json向應用程序構建工具描述 Angular 應用程序。
 package.json由npm（節點包管理器）用來運行完成的應用程序。
 tsconfig.*是向 TypeScript 編譯器描述應用程序配置的文件。
+
+component
+selector：描述 Angular 如何引用模板中的組件。
+standalone：描述組件是否需要NgModule.
+imports：描述組件的依賴關係。
+template：描述組件的 HTML 標記和佈局。
+styleUrls：以數組形式列出組件使用的 CSS 文件的 URL。
+
+
+建立 HomeComponent
+ng generate component home --standalone --inline-template --skip-tests
+--standalone 就可以在 Component 使用 imports 來引入其他的 Dependency，像是 Directive、Pipe、Component 等等。此外 imports 也可以引入其他的 NgModule。
+--inline-template 感覺建立後就能與CSS或templete有關聯
+--skip-tests 當專案建立後，不增加單元測試檔案
+先到這個發現越找問題越多
