@@ -19,7 +19,8 @@
                              v1.10    利用*ngFor 動態讀取數據
                              v1.11    建立 ng g service housing --skip-tests
                                       觀念將service資料注入(inject)到HomeComponent
-
+                             v1.12    新增DetailsComponent，ng g c details --standalone --inline-template --skip-tests
+                                      導入路由功能 當手動輸入 http://localhost:4200/details/3 會切換 DetailsComponent
   ************************************************************************************************/
 
 建立觀念
