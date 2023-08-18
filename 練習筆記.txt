@@ -6,6 +6,7 @@
    2023/08/18   Yolin.Chen   v1.01    建立專案
                              v1.02    建立HomeComponent，ng generate component home --standalone --inline-template --skip-tests
                              v1.03    將HomeComponent加到主畫面
+                             v1.04    加入一個搜尋欄位、按鈕，加入CSS
   ************************************************************************************************/
 
 建立觀念
@@ -51,3 +52,9 @@ ng generate component home --standalone --inline-template --skip-tests
 --inline-template 感覺建立後就能與CSS或templete有關聯
 --skip-tests 當專案建立後，不增加單元測試檔案
 先到這個發現越找問題越多
+
+
+Git 如何刪除一個已經push到remote端的commit
+git reset --hard HEAD~1
+git push --force
+記得Fetch & Refresh 確認已回到前一個commit
