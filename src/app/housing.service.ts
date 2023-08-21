@@ -9,8 +9,9 @@ export class HousingService {
   //constructor() { } //mark v1.11
 
   //add v1.11
-  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
+  //readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa'; //mark 1.18
 
+  /* mark 1.18
   housingLocationList: HousingLocation[] = [
     {
       id: 0,
@@ -113,13 +114,32 @@ export class HousingService {
       laundry: true
     }
   ];
+  */
 
+  url = 'http://localhost:3000/locations'; //add v1.18
+
+  /* mark v1.18
   getAllHousingLocations(): HousingLocation[] {
     return this.housingLocationList;
   }
+  */
 
+  //add v1.18
+  async getAllHousingLocations(): Promise<HousingLocation[]> {
+    const data = await fetch(this.url);
+    return await data.json() ?? [];
+  }
+
+  /* mark v1.18
   getHousingLocationById(id: number): HousingLocation | undefined {
     return this.housingLocationList.find(housingLocation => housingLocation.id === id);
+  }
+  */
+
+  //add v1.18
+  async getHousingLocationById(id: number): Promise<HousingLocation | undefined> {
+    const data = await fetch(`${this.url}/${id}`);
+    return await data.json() ?? {};
   }
 
   submitApplication(firstName: string, lastName: string, email: string) {

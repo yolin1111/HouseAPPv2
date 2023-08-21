@@ -96,9 +96,19 @@ export class DetailsComponent {
     email: new FormControl('')
   });
 
+  /*mark v1.18
   constructor() {
     const housingLocationId = Number(this.route.snapshot.params['id']);
     this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
+  }
+  */
+
+  //add v1.18
+  constructor() {
+    const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
+    this.housingService.getHousingLocationById(housingLocationId).then(housingLocation => {
+      this.housingLocation = housingLocation;
+    });
   }
 
   //add v1.16

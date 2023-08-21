@@ -27,6 +27,10 @@
                                       AppComponent 程式碼已經修正這行造成 <a [routerLink]="['/']">
                              v1.16    在DetailsComponent加入表單功能，並輸出到Chrome控制台
                              v1.17    加入搜尋功能(目前只有搜尋按紐)
+                             v1.18    啟動Json Server，讓資料來自另外一台伺服器
+                                      將圖片下載到assets資料夾
+                                      安裝 npm install -g json-server
+                                      啟動 json-server --watch db.json
   ************************************************************************************************/
 
 建立觀念
