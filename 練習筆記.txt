@@ -23,6 +23,8 @@
                                       導入路由功能 當手動輸入 http://localhost:4200/details/3 會切換 DetailsComponent
                              v1.13    點選後路由動態變換，並顯示 details works! 3
                              v1.14    客製化 DetailsComponent
+                             v1.15    切換到 DetailsComponent後，點選Home圖案要返回
+                                      AppComponent 程式碼已經修正這行造成 <a [routerLink]="['/']">
   ************************************************************************************************/
 
 建立觀念
